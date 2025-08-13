@@ -25,16 +25,16 @@ A Django-based web application for secure file upload and download. Files are en
    cd FUTURE_CS_03
 
 2. **Install dependencies**
-
-pip install -r requirements.txt
-
+   ```bash
+    pip install -r requirements.txt
+   
 3. **Apply migrations**
-
-python manage.py migrate
+    ```bash
+    python manage.py migrate
 
 4. **Run the server**
-
-python manage.py runserver
+    ```bash
+    python manage.py runserver
 
 5. **Access the app**
 
