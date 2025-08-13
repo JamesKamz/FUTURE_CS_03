@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-
 {% block content %}
 <h1>Uploaded Files</h1>
+<h5>All files are encrypted using AES</h5>
 <ul>
     {% for file in files %}
         {% if file.uid %}

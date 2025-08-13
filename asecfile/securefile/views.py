@@ -23,7 +23,7 @@ def upload_file(request):
                 filename=filename,
                 file=f'encrypted_files/{filename}.enc',
             )
-            return render(request, 'file_list.html', {'uid': saved.uid})
+            return redirect('file_list')
     else:
         form = EncryptedFileForm()
     return render(request, 'upload.html', {'form': form})
