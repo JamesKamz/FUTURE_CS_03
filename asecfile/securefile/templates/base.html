@@ -1,0 +1,33 @@
+{% load static %}
+{% load widget_tweaks %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AsecFile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/" style="color:#fff; font-weight:bold; text-decoration:none;">Asecfile</a>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/">Files</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; {{ year|default:"2025" }} AsecFile. By James Kamz. All rights reserved.
+    </footer>
+</body>
+</html>

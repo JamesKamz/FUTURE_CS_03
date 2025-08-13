@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Uploaded Files</h1>
+<ul>
+    {% for file in files %}
+        {% if file.uid %}
+            <li>
+                <a href="{% url 'download_file' file.uid %}">{{ file.filename }}</a>
+            </li>
+        {% else %}
+            <li>{{ file.filename }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
